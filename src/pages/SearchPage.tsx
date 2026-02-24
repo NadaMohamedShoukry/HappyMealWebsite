@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState } from "react";
 import { useSearch } from "../hooks/useSearch";
 import EmptySearchState from "../assets/undraw_cooking_j2pu.svg";
@@ -34,7 +35,7 @@ export default function SearchPage() {
           <div>
             {!isLoading ? (
               <div className="flex flex-col gap-5">
-                {searchResult?.map((meal) => (
+                {searchResult?.map((meal: any) => (
                   <div className="bg-[#acd8a7] dark:bg-[#8bca84] rounded-4xl flex flex-col sm:flex-row sm:justify-between items-center p-10">
                     <div
                       key={meal.idMeal}
